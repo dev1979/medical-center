@@ -1,0 +1,25 @@
+:root{
+    /* Add Variables */
+    --main-font: 'Mulish', sans-serif;
+    --green: #009ba2;
+    --dark:#343233;
+    --blue:#0b8fc7;
+    --text-grey:#4e5155;
+    --headings:#1e517e;
+    --white:#fefefe;
+    --ts: all 0.3s;
+}
+
+/* box-sizing */
+html{
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+body{
+    font-family: var(--main-font);
+    min-height: 100%;
+    background: linear-gradient(to top, #c0f2f5 0%, white 100%);
+}
+
+/* set button attributes */
