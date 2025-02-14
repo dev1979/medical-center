@@ -8,6 +8,8 @@
     --text-grey:#4e5155;
     --headings:#1e517e;
     --white:#fefefe;
+    --aarogya-green: #006f42;
+    --aarogya-pink:#fc6c9c;
     --ts: all 0.3s;
 }
 
@@ -35,7 +37,7 @@ body{
 
 img, svg, picture, video{
     width: 100%;
-    display: block;
+    /* display: block; */
 }
 
 a{
@@ -81,11 +83,24 @@ li{
 
 }
 
-
 /* Utility Class */
 .accent-green{
     color: var(--green);
 }
+
+/* ANIMATION */
+@keyframes slide-in{
+    0%{
+        opacity:0;
+        transform:translateX(-30px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 /* Styles */
 .header{
     position: sticky;
@@ -211,7 +226,7 @@ li{
 }
 
 .search-text{
-    height: 2rem;
+    height: 2.2rem;
     width: 100%;
     font-size: 1.3rem;
     border-radius: 500px;
@@ -222,7 +237,7 @@ li{
 
 .search-btn{
     position:absolute;
-    top: 0.3rem;
+    top: 0.22rem;
     right: 0.6rem;
     border: none;
     background-color: var(--white);
@@ -234,15 +249,47 @@ li{
     margin-top: 1rem;
 }
 
+/* Brand name on top of the Hero image */
+.brand_text{
+    position:absolute;
+    top:22rem;
+    left: 4rem;
+    background-color: rgba(191, 223, 238, 0.85);
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-radius: 1rem;
+    letter-spacing: 0.2rem;
+    animation: slide-in 2s 0.1s backwards;
+}
+.main_text{
+    color: var(--aarogya-green);
+    font-size: 4rem;
+}
+.slogan{
+    color: var(--aarogya-pink);
+    font-size: 2rem;
+    margin: 0 .5rem 0 .5rem;
+}
+
+/*  */
 .specialists{
     width: 80%;
     background-color: var(--white);
     border-radius: 1rem;
     margin: 3rem auto;
     padding: 1.5rem;
+    
+}
+
+
+.appointments{
     -webkit-box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.58);
     -moz-box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.58);
     box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.58);
+    width: 80%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    margin: 3rem auto;
+    padding: 1.5rem;
 }
 
 .appointment_form{
@@ -315,4 +362,61 @@ li{
     .section_submit{
         flex: 0 1 calc(25% - 1rem);
     }
+}
+
+.speciality_detail{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem 0 1.5rem 0;
+
+}
+.speciality_class{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.speciality_detail h1{
+    flex: 0 0 calc(100% - 1rem);
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--dark);
+}
+
+.special{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.special div{
+    width: 12rem;
+    height: 12rem;
+    border: solid 1px var(--headings);
+    padding-top: 1.8rem;
+    border-radius: 1rem;
+    transition: var(--ts);
+}
+
+.special div:hover{
+    transform: scale(1.1);
+}
+
+
+.special h2{
+    font-size: 1.7rem;
+    color: var(--text-grey);
+}
+
+.special_logo{
+    color: var(--blue);
 }
