@@ -59,6 +59,7 @@ li{
     color: var(--white);
     font-size: 1.3rem;
     transition: var(--ts);
+    text-transform: uppercase;
 }
 
 .custom-btn:hover{
@@ -399,8 +400,6 @@ li{
   
 }
 
-
-
 .speciality_detail{
     display: flex;
     width: 100%;
@@ -671,8 +670,17 @@ li{
     flex: 1;
 }
 
+@media (min-width:1050px){
+    .subs_form{
+        flex-direction: row;
+    }
+    .subs_input{
+        max-width:50rem;
+    }
+}
+
 .subs_input{
-    height: 3.3rem;
+    height: 3rem;
     border: none;
     outline: none;
     border-radius: 0.5rem;
@@ -684,7 +692,7 @@ li{
     color: var(--white);
     font-size: 1.8rem;
     font-weight: 700;
-    padding: 0.6rem 0 0.6rem 0;
+    padding: 0.6rem;
     text-align: center;
 }
 
